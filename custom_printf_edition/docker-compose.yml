@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+    custom_printf_edition:
+        build: .
+        ports:
+            - '20007:5555'
+        stdin_open: true
+        tty: true
+        volumes:
+            - ./flag:/flag
+            - ./source/custom_printf_edition:/home/ctf/custom_printf_edition

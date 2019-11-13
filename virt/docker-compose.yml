@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+    virt:
+        build: .
+        ports:
+            - '20024:5555'
+        stdin_open: true
+        volumes:
+            - ./flag:/flag
+            - ./source/virt:/home/ctf/virt

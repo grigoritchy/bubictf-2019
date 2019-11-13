@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+    bin_from_web:
+        build: .
+        ports:
+            - '20010:5555'
+        stdin_open: true
+        tty: true
+        volumes:
+            - ./flag:/flag
+            - ./source/run.py:/home/ctf/run.py
+            - ./source/bin_from_web.js:/home/ctf/bin_from_web.js
+            - ./source/bin_from_web.c:/home/ctf/bin_from_web.c
+            - ./source/bin_from_web.wasm:/home/ctf/bin_from_web.wasm
+            - ./source/node:/home/ctf/node
